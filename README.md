@@ -1,4 +1,4 @@
-ShineTextView
+# Shine for Android
 
 
 ## How to use
