@@ -1,4 +1,4 @@
-package com.shine.android;
+package com.shine.library;
 
 import android.graphics.Color;
 import android.text.SpannableString;

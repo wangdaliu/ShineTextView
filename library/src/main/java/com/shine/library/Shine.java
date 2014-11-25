@@ -1,4 +1,4 @@
-package com.shine.android;
+package com.shine.library;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

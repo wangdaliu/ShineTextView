@@ -1,11 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'android-library'
 
 android {
-    compileSdkVersion 20
+    compileSdkVersion 19
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "interactivelabs.shinetextview"
+        applicationId "com.shine.library"
         minSdkVersion 14
         targetSdkVersion 20
         versionCode 1
