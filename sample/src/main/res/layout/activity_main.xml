@@ -10,7 +10,7 @@
 
 
     <com.shine.library.ShineTextView
-        android:id="@+id/grandient_view"
+        android:id="@+id/shine_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="40sp"

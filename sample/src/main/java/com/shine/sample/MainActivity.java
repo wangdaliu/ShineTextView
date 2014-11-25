@@ -15,8 +15,8 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private Shine mGrandient;
-    private ShineTextView mGrandientTextView;
+    private Shine mShine;
+    private ShineTextView mShineTextView;
     private Button mStart;
     private Button mCancel;
     private List<String> shineList = new ArrayList<String>();
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mGrandientTextView = (ShineTextView) findViewById(R.id.grandient_view);
+        mShineTextView = (ShineTextView) findViewById(R.id.shine_view);
         mStart = (Button) findViewById(R.id.start);
         mCancel = (Button) findViewById(R.id.cancel);
 
@@ -39,9 +39,9 @@ public class MainActivity extends Activity {
         mStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mGrandient == null) {
-                    mGrandient = new Shine(DEFAULT_DURATION, DEFAULT_START_DELAY, shineList);
-                    mGrandient.start(mGrandientTextView);
+                if (mShine == null) {
+                    mShine = new Shine(DEFAULT_DURATION, DEFAULT_START_DELAY, shineList);
+                    mShine.start(mShineTextView);
                 }
 
             }
@@ -50,8 +50,8 @@ public class MainActivity extends Activity {
         mCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mGrandient != null && mGrandient.isAnimating()) {
-                    mGrandient.cancel();
+                if (mShine != null && mShine.isAnimating()) {
+                    mShine.cancel();
                 }
             }
         });
