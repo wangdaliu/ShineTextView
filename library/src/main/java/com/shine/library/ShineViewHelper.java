@@ -20,7 +20,7 @@ public class ShineViewHelper {
 
     private boolean isSetUp;
 
-    private float shinePercent;
+    private double shinePercent;
 
     // all texts need to show;
     private List<String> shineList = new ArrayList<String>();
@@ -30,6 +30,8 @@ public class ShineViewHelper {
     private boolean mIsVisible;
     // current index of string list
     private int currentIndex = 0;
+
+    private int groupCount = 0;
 
 
     public interface AnimationSetupCallback {
@@ -51,7 +53,7 @@ public class ShineViewHelper {
 
     public void setShine(boolean isShining) {
         this.isShining = isShining;
-        mIsVisible = !isShining;
+        mIsVisible = isShining;
     }
 
     protected void onSizeChanged() {
@@ -63,7 +65,7 @@ public class ShineViewHelper {
         }
     }
 
-    public void setShinePercent(float shinePercent) {
+    public void setShinePercent(double shinePercent) {
         this.shinePercent = shinePercent;
     }
 
@@ -88,6 +90,7 @@ public class ShineViewHelper {
         if (isShining) {
             SpannableString spannableString = new SpannableString(text);
             for (int i = 0; i < spannableString.length(); i++) {
+
                 spannableString.setSpan(
                         new ForegroundColorSpan(Color.argb(clamp(mAlphas[i] + (mIsVisible ? shinePercent : 2.0f - shinePercent)), Color.red(currentColor), Color.green(currentColor), Color.blue(currentColor))), i, i + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
@@ -97,13 +100,15 @@ public class ShineViewHelper {
     }
 
     public void toggle() {
-        if (currentIndex >= shineList.size() - 1) {
-            currentIndex = 0;
-        } else {
-            currentIndex++;
-        }
-        resetAlphas();
-
         mIsVisible = !mIsVisible;
+        groupCount++;
+        if (groupCount % 2 == 0) {
+            if (currentIndex >= shineList.size() - 1) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            resetAlphas();
+        }
     }
 }

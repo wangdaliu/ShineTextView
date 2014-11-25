@@ -52,7 +52,7 @@ public class ShineTextView extends TextView implements ShineViewBase {
     }
 
     @Override
-    public void setShinePercent(float percent) {
+    public void setShinePercent(double percent) {
         mShineViewHelper.setShinePercent(percent);
     }
 

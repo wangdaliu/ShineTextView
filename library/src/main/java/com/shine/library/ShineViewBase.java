@@ -9,7 +9,7 @@ public interface ShineViewBase {
 
     public void setShine(boolean isShining);
 
-    public void setShinePercent(float percent);
+    public void setShinePercent(double percent);
 
     public void setShineList(List<String> shineList);
 
