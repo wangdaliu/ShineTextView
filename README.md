@@ -19,8 +19,6 @@ mShine = new Shine(DEFAULT_DURATION, DEFAULT_START_DELAY, shineList);
 mShine.start(mShineTextView);
 ```
 
-You may want to keep track of the shimmer instance after the animation is started if you want to stop it.
-
 To stop it:
 ```java
 if (mShine != null && mShine.isAnimating()) {
