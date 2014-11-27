@@ -1,4 +1,4 @@
-# Shine for Android
+# Shine TextView for Android
 [![ScreenShot](shine.gif)](https://github.com/wangdaliu/ShineTextView/blob/master/shine.gif)
 
 ## How to use
