@@ -25,3 +25,7 @@ if (mShine != null && mShine.isAnimating()) {
     mShine.cancel();
 }
 ```
+## Sample
+
+See the [sample](https://github.com/wangdaliu/ShineTextView/master/sample) for a common use of this library.
+
